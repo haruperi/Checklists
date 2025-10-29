@@ -2,18 +2,23 @@
 
 This repository contains checklists of popular processes in the software engineering field. These checklists are designed to help developers, especially solo developers and small teams, follow structured workflows and ensure best practices throughout the software development life cycle.
 
-## 📋 Available Checklists
+## 📋 Available Checklists & Guides
 
 ### [Solo Developer SDLC Checklist](./docs/solo-developer-sdlc-checklist.md)
 
 A comprehensive Software Development Life Cycle (SDLC) checklist tailored for solo developers, covering all phases from planning and requirements to deployment and maintenance.
+
+### [Private Package Guide](./docs/private_package_guide.md)
+
+A comprehensive guide on using private Python packages across multiple projects. Covers multiple methods including local pip install, Git repositories, PYTHONPATH, and more, with recommendations for different use cases.
 
 ## 📁 Repository Structure
 
 ```
 Checklists/
 ├── docs/                  # Documentation and checklist files
-│   └── solo-developer-sdlc-checklist.md
+│   ├── solo-developer-sdlc-checklist.md
+│   └── private_package_guide.md
 ├── README.md              # This file
 └── .gitignore            # Git ignore rules
 ```
