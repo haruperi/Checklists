@@ -1,6 +1,8 @@
 # Solo Developer SDLC Checklist
 
-## 1. Planning & Requirements
+## 1. Planning & Requirements (Output - Software Requirements Specification.md)
+
+*Prompt: I have a project to create a {name of app}. Basically, this app will {bullet item goals}. We want to create a clean Software Requirements Specification (SRS) document that includes all the elements from the checklist below and the provided template. Ask me any questions before you produce the SRS document.*
 
 - [ ] Define project goals and objectives
 - [ ] Identify target users and their needs
@@ -11,28 +13,38 @@
 - [ ] Identify potential risks and constraints
 - [ ] Choose tech stack and architecture
 
-## 2. Design
+## 2. Design (Output - Design.md )
 
-- [ ] Create user flow diagrams
-- [ ] Sketch wireframes or mockups (even rough ones)
-- [ ] Create class diagrams
-- [ ] Design database schema
-- [ ] Plan API structure and endpoints
-- [ ] Document architecture decisions
-- [ ] Consider scalability and performance needs
-- [ ] Plan authentication and authorization approach
-- [ ] Identify third-party services needed
+*Prompt: We will use the provided Software Requirements Specification.md to complete the checklist below. All will be in one file, Design.md, so even though each task has an output, it's just appended to the same file, except for the last file, README.md, which will be a separate file summarising everything.*
+
+- [ ] Create detailed Use Case Diagrams (Output: MD file with both Text-Based UML Style and Mermaid)
+- [ ] Create detailed class diagrams (Output: MD file with both Text-Based UML Style + Mermaid)
+- [ ] Create detailed Sequence diagrams (Output: MD file with both Text-Based UML Style + Mermaid)
+- [ ] Sketch wireframes or mockups (Output: Rough sketch using ASCII MD file)
+- [ ] Design a detailed database schema (Output: MD file with both text format + Mermaid)
+- [ ] Plan API structure and endpoints (Output: MD file)
+- [ ] Document architecture decisions and create System Architecture Diagram (Output: MD file with both text format + Mermaid)
+- [ ] Consider scalability and performance needs (Output: MD file)
+- [ ] Plan authentication and authorisation approach (Output: MD file)
+- [ ] Identify third-party services needed (Output: MD file)
+- [ ] Create project structure based on the below structure (Output: MD file)
+  root/
+  |--app/
+  |--docs/
+  |--scripts/
+  |	|--examples/
+  |--logs/
+  |--tests/
+- [ ] Create initial documentation README.md
 
 ## 3. Development Setup
 
-- [ ] Initialize version control (Git)
+- [ ] Initialise version control (Git)
 - [ ] Set up remote repository (GitHub/GitLab)
-- [ ] Create project structure
 - [ ] Set up development environment
 - [ ] Install dependencies and tools
 - [ ] Configure logging, linting and formatting
 - [ ] Set up environment variables management
-- [ ] Create initial documentation (README)
 
 ## 4. Implementation
 
