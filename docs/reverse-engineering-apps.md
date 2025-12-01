@@ -105,6 +105,27 @@ Instructions:
 Do not write anything about implementation. Only the product features.
 ```
 
+## Prompt for small projects 
+```md
+I want you to reverse-engineer this small repository: <INSERT_REPO_URL>
+
+Produce a short, clear **Feature Inventory**.
+
+Guidelines:
+- List only core features (3–10 items)
+- Explain each in 1–2 sentences
+- Describe what the tool does, not how it works
+- No architecture yet
+
+Output file: FeatureInventory.md  
+Structure:
+1. Summary (3–5 sentences)  
+2. Core Features (bullet list)  
+3. Inputs / Outputs  
+4. Limitations or missing features
+
+```
+
 ---
 
 ## 2. Technical Recon: Understand the Architecture
@@ -191,6 +212,28 @@ Structure:
 8. Implications for our own redesign
 ```
 
+## Prompt for small projects
+
+```md
+Using the small repository: <INSERT_REPO_URL>
+
+Produce a simple **Architecture Overview**.
+
+Guidelines:
+- No deep breakdown, just the essentials
+- Identify main components (files/modules) and their responsibilities
+- Show how they connect
+- Include 1 small Mermaid diagram
+
+Output file: ArchitectureOverview.md  
+Sections:
+1. High-Level Description  
+2. Component Responsibilities  
+3. Data Flow (simple)  
+4. Mermaid diagram
+
+```
+
 ---
 
 ## 3. From Reverse-Engineering → System Requirements (SRS.md)
@@ -270,8 +313,25 @@ Structure (IEEE-style):
 
 Output file: **SRS.md**
 Use clear, professional formatting.
+```
 
+## Prompt for small projects
+```md
+Using the Feature Inventory and Architecture Overview, generate a **Mini SRS**.
 
+Constraints:
+- Keep it short (1–2 pages max)
+- Only include top-level requirements
+- No deep classifications or IEEE-format sections
+
+Output file: SRS.md  
+Structure:
+1. Purpose  
+2. Scope  
+3. Functional Requirements (5–12 items max)  
+4. Non-Functional Requirements (3–6 items)  
+5. Assumptions  
+6. Future Enhancements
 ```
 
 ## 4. Non-Functional Requirements
@@ -378,7 +438,25 @@ Structure:
 10. Diagrams (Mermaid)
 
 Output file: **Design.md**
+```
 
+## Prompt for small projects
+```md
+Generate a compact **Design Document** for this small project, based on the SRS.
+
+Rules:
+- The design must be simple and directly map to the existing files
+- Summaries only
+- 1–2 diagrams max
+- No overly formal language
+
+Output file: Design.md  
+Sections:
+1. Overview  
+2. Components and Responsibilities  
+3. Data Structures  
+4. API or Function Overview  
+5. One Mermaid diagram
 
 ```
 
@@ -535,6 +613,25 @@ Output 4 files:
 - SequenceDiagram.MD
 ```
 
+
+## Prompt for small projects
+
+```md
+Generate minimal diagrams for this small project.
+
+Deliver:
+1. Use Case Diagram (Mermaid + 2–3 use cases)
+2. Class Diagram (if OOP) OR Module Diagram (if scripts)
+3. One Sequence Diagram for the primary execution path
+
+Output:
+- UseCaseDiagram.md
+- ClassOrModuleDiagram.md
+- SequenceDiagram.md
+
+Keep diagrams very small and simple.
+
+```
 ---
 
 ## 6. Implementation Plan (ImplementationPlan.md)
@@ -613,29 +710,21 @@ Using the SRS, Design, and Diagrams documents, produce a complete **Implementati
 Rules:
 - Break everything into concrete tasks.
 - Use phases (Phase 0, Phase 1, Phase 2…)
-- Each phase must have 10–30 actionable tasks.
+- Each phase must have several related actionable tasks.
 - Tasks must be detailed enough that a junior developer can execute them.
-- Cover:
-    - Repo setup
-    - CI/CD
-    - Core engine coding
-    - Data layer
-    - Broker & execution model
-    - Strategies
-    - Indicators
-    - Analyzers
-    - Logging
-    - Testing
-    - Documentation
-    - Optional live trading
+- Format:
+    - Checkbox TODO list
+    - Phases with explanations
+    - Task to implement with its implementing steps.
+    - Create and run unit tests
+    - Create and run usage examples
+    - Run an auto-formatter (e.g black)
+    - Run lint + quality (e.g flake8)
+    - User Documentation + Developer notes and warnings
+    - Git Commit
+   
 
 Output file: **ImplementationPlan.md**
-
-Format:
-- Checkbox TODO list
-- Phases with explanations
-- Developer notes and warnings
-
 ```
 
 ---
