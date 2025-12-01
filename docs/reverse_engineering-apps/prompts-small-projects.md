@@ -147,3 +147,12 @@ Each should build on the previous files.
 This is for a system I will build myself — do NOT reproduce any code from the repo.
 This must be a professional software engineering documentation set.
 ```
+
+### Bonus Prompt for minimalistic
+```md
+Create a class diagram in Mermaid for this app
+
+Create an MD file with the Mermaid code
+
+If you are to redo this project, write a comprehensive to-do checklist of all the tasks you would do in order, write this in an implementation_plan.md
+```
